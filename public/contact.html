@@ -102,7 +102,8 @@
             <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
             <li class="nav-item"><a href="/news" class="nav-link">News</a></li>
 
-            <li class="nav-item"><a href="/loginsignup" class="nav-link">Login / Sign up</a></li>
+            <li class="nav-item" id = "loginsignup"><a href="/loginsignup" class="nav-link">Login / Sign up</a></li>
+	          <li class="nav-item" id="logout"><a href="/auth/logout" class="nav-link">logout</a></a></li>
 
 	          <li class="nav-item cta cta-colored"><a href="/cart" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
@@ -268,18 +269,40 @@
         },
         properties: {
           title: 'Store',
-          description: 'K.J. Somaiya'
+          description: 'Ghatkopar'
         }
       },
       {
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [72.7964856, 19.07409436]
+          coordinates: [ 73.789803, 19.997454]
         },
         properties: {
           title: 'Store',
-          description: 'Mumbai'
+          description: 'Nashik'
+        }
+      }, 
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [ 75.906387, 17.659920]
+        },
+        properties: {
+          title: 'Store',
+          description: 'Solapur'
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [ 74.244865, 16.691307]
+        },
+        properties: {
+          title: 'Store',
+          description: 'Kalopur'
         }
       }]
     };
@@ -320,12 +343,16 @@
   
   <script src="js/main.js"></script>
   <script>
+    console.log("hii from contact");
 	  const cookie = document.cookie;
+    console.log(cookie);
 	  if(cookie === "") {
+      console.log("in if");
 		  $("#logout").hide();
 		  $("#loginsignup").show();
 	  } else {
 		$("#logout").show();
+      console.log("in else");
 		  $("#loginsignup").hide();
 	  }
   </script>
