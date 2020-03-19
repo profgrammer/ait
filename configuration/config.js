@@ -4,8 +4,8 @@ module.exports = {
      * It consists of Twitter app information, database information.
      */
   
-    facebook_api_key: "226524102084072",
-    facebook_api_secret: "a22e9f8973864fd396bda013017fbf5b",
+    facebook_api_key: "FACEBOOK_API_KEY_HERE",
+    facebook_api_secret: "FACEBOOK_API_SECRET_HERE",
     callback_url: "http://localhost:3000/facebookauth/callback",
     use_database: false,
     host: "localhost",
