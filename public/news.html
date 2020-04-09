@@ -180,5 +180,16 @@
   <div style="color:#99cc00;font-size:10px; text-align:right; width:500px;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#99cc00;">Surfing Waves</a></div> 
   <!-- end sw-rss-feed code -->
   <script src="js/main.js"></script>
+  <script>
+	  const cookie = document.cookie;
+	  console.log("cookie" + cookie);
+	  if(cookie === "") {
+		  $("#logout").hide();
+		  $("#loginsignup").show();
+	  } else {
+		$("#logout").show();
+		  $("#loginsignup").hide();
+	  }
+  </script>
   </body>
   </html>
