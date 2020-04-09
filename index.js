@@ -5,11 +5,17 @@ const fs = require('fs');
 const bp = require('body-parser');
 const cp = require('cookie-parser');
 const passport = require('passport');
+const mongoose = require('mongoose');
 const FacebookStrategy = require('passport-facebook').Strategy;
 const session = require('express-session');
 const config = require('./configuration/config');
 
+mongoose.connect('mongodb://localhost:27017/ecommerce', {useNewUrlParser: true, useUnifiedTopology: true})
+.then(() => console.log('connected to database'))
+.catch(err => console.log(err));
+
 app.use(express.static('public'));
+app.use('/images', express.static('uploads'));
 
 app.use(bp.json());
 app.use(cp());
@@ -142,3 +148,5 @@ function ensureAuthenticated(req, res, next) {
   }
 
 app.listen(3000, () => console.log("listening on port 3000"));
+
+

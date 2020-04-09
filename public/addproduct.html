@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h4>Add product</h4>
+        <form class="bg-white p-5 contact-form" action="/admin/addproduct" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="text" name="name" id="" placeholder="Product name">
+            </div>
+            <div class="form-group">
+                <input type="text" name="description" id="" placeholder="Product description">
+            </div>
+            <div class="form-group">
+                <input type="number" name="price" id="" placeholder="Product price">
+            </div>
+            <div class="form-group">
+                <input type="file" name="photos" id="" accept="image/x-png,image/gif,image/jpeg" multiple="multiple">
+            </div>
+            <div class="form-group">
+                <input type="file" name="photo" id="" accept="image/x-png,image/gif,image/jpeg">
+            </div>
+            <input type="submit" value="Add product">
+        </form>
+
+        
+    </div>
+</body>
+</html>
